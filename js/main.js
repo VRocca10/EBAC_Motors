@@ -27,17 +27,18 @@ $(document).ready(function () {
                 required: true
             },
             veiculoDeInteresse: {
-                required: false,
-            }
+                required: false
+            },
 
         },
         messages: {
             nome: "Por favor, insira seu nome"
         },
         submitHandler: function (form) {
-            console.log(form)
+            alert(`Sua requisição foi enviada para análise, parabéns pela aquisição!`);
+            form.reset();
         },
-        invalidHandler: function (evento, validador) {
+        invalidHandler: function (form, validador) {
             let camposIncorretos = validador.numberOfInvalids();
             if (camposIncorretos) {
                 alert(`Existe ${camposIncorretos} campos incorretos`)

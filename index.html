@@ -130,7 +130,7 @@
             </ul>
         </div>
     </section>
-    <section>
+    <section > 
         <div class="container">
             <h2>Promoções</h2>
             <ul class="container-flex lista-veiculos">
@@ -198,7 +198,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="contato">
         <div class="container">
             <h2>Entre em contato</h2>
             <form>
@@ -251,62 +251,14 @@
         </div>
     </footer>
 
-    <script src="./js/jquery.mask.min.js"></script>
-    <script src="./js/jquery.validate.min.js"></script>
-    <script src="./js/messages_pt_BR.min.js"></script>
+    
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $("#carousel-imagens").slick({
-                autoplay: true,
-                fade: true,
-                arrows: false
-            });
-
-            $(".menu-hamburguer").click(function () {
-                $("nav").slideToggle();
-            })
-
-            $("#telefone").mask("(00) 00000-0000")
-
-            $("form").validate({
-                rules: {
-                    nome: {
-                        required: true
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    telefone: {
-                        required: true
-                    },
-                    mensagem: {
-                        required: true
-                    },
-                    veiculoDeInteresse: {
-                        required: false,
-                    }
-
-                },
-                messages: {
-                    nome: "Por favor, insira seu nome"
-                },
-                submitHandler: function (form) {
-                    console.log(form)
-                },
-                invalidHandler: function (evento, validador) {
-                    let camposIncorretos = validador.numberOfInvalids();
-                    if (camposIncorretos) {
-                        alert(`Existe ${camposIncorretos} campos incorretos`)
-                    }
-                }
-            })
-        })
-    </script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
